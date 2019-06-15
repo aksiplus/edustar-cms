@@ -30,6 +30,9 @@ class CreateSekolahsTable extends Migration
             $table->date('tanggal_sk_pendirian')->nullable();
             $table->string('sk_izin_operasional')->nullable();
             $table->date('tanggal_sk_izin_operasional')->nullable();
+
+            $table->string('latitude')->nullable();
+            $table->string('longitude')->nullable();
         });
     }
 
