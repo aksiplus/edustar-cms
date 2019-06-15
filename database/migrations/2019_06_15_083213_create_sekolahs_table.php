@@ -21,11 +21,15 @@ class CreateSekolahsTable extends Migration
             $table->enum('bentuk_pendidikan',
                 ['sd', 'mi', 'smp', 'mts', 'sma', 'ma', 'mak']
             );
-            $table->string('alamat');
-            $table->string('desa_id');
-            $table->string('kecamatan_id');
-            $table->string('kota_id');
-            $table->string('provinsi_id');
+
+            $table->string('rt')->nullable();
+            $table->string('rw')->nullable();
+            $table->string('alamat')->nullable();
+            $table->string('desa_id')->nullable();
+            $table->string('kecamatan_id')->nullable();
+            $table->string('kota_id')->nullable();
+            $table->string('provinsi_id')->nullable();
+            $table->string('kode_pos')->nullable();
             $table->string('sk_pendirian_sekolah')->nullable();
             $table->date('tanggal_sk_pendirian')->nullable();
             $table->string('sk_izin_operasional')->nullable();

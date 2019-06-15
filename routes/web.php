@@ -15,10 +15,22 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function(){
-    Route::get('/', function(){
-        return view('admin.dashboard');
+
+//Route untuk Administrator
+Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin'], function(){
+    Route::get('/', 'Dashboard@index')->name('admin.dashboard');
+
+    Route::group(['prefix' => 'ppdb'], function(){
+        Route::get('/', 'PPDB@index')->name('admin.ppdb');
+        // Route::get('/{id}', 'PPDB@index')->name('admin.ppdb');
     });
+
+    Route::group(['prefix' => 'sekolah'], function(){
+        Route::get('/', 'Sekolah@index')->name('admin.sekolah');
+        // Route::get('/{id}', 'PPDB@index')->name('admin.ppdb');
+    });
+
+
 });
 
 
