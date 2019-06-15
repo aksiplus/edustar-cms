@@ -13,7 +13,7 @@ class CreateGurusTable extends Migration
      */
     public function up()
     {
-        Schema::create('guru', function (Blueprint $table) {
+        Schema::create('tenaga_pendidik', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
             $table->string('email')->unique();
@@ -31,6 +31,6 @@ class CreateGurusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('guru');
+        Schema::dropIfExists('tenaga_pendidik');
     }
 }
