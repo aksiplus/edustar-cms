@@ -20,6 +20,7 @@ EduStar adalah sebuah platform Edukasi berbasis Cloud. Layanan yang diberikan Ed
 Pengembang Awal EduStar adalah
 
 - **[Antonio Saiful Islam](https://github.com/antoniosai)**
+- **[Muhammad Iqbal](https://github.com/iqbalrevvin)**
 
 
 ## Lisensi
