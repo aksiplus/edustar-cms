@@ -1,39 +1,17 @@
-<div class="app-header-right">
-    <div class="header-btn-lg pr-0">
-        <div class="widget-content p-0">
-            <div class="widget-content-wrapper">
-                <div class="widget-content-left">
-                    <div class="btn-group">
-                        <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="p-0 btn">
-                            <img width="42" class="rounded-circle" src="{{ Gravatar::get(Auth::user()->email) }}" alt="">
-                            <i class="fa fa-angle-down ml-2 opacity-8"></i>
-                        </a>
-                        <div tabindex="-1" role="menu" aria-hidden="true" class="dropdown-menu dropdown-menu-right">
-                            <button type="button" tabindex="0" class="dropdown-item">Profile Anda</button>
-                            <button type="button" tabindex="0" class="dropdown-item">Edit Profile</button>
-                            <div tabindex="-1" class="dropdown-divider"></div>
-                            <a class="dropdown-item" tabindex="0" href="{{ route('logout') }}"
-                                onclick="event.preventDefault();
-                                                document.getElementById('logout-form').submit();">
-                                {{ __('Logout') }}
-                            </a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                @csrf
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                <div class="widget-content-left  ml-3 header-user-info">
-                    <div class="widget-heading">
-                        {{ Auth::user()->name }}
-                    </div>
-                    <div class="widget-subheading">
-                        {{ 'Administrator' }}
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
+<div class="dropdown">
+    <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
+        <span class="logged-name hidden-md-down">{{ Auth::user()->name }}</span>
+        <img src="{{ Gravatar::get(Auth::user()->email) }}" class="wd-32 rounded-circle" alt="">
+        <span class="square-10 bg-success"></span>
+    </a>
+    <div class="dropdown-menu dropdown-menu-header wd-200">
+        <ul class="list-unstyled user-profile-nav">
+            <li><a href=""><i class="icon ion-ios-person"></i> Edit Profile</a></li>
+            <li><a href=""><i class="icon ion-ios-gear"></i> Settings</a></li>
+            <li><a href=""><i class="icon ion-ios-download"></i> Downloads</a></li>
+            <li><a href=""><i class="icon ion-ios-star"></i> Favorites</a></li>
+            <li><a href=""><i class="icon ion-ios-folder"></i> Collections</a></li>
+            <li><a href=""><i class="icon ion-power"></i> Sign Out</a></li>
+        </ul>
+    </div><!-- dropdown-menu -->
 </div>

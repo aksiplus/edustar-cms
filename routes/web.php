@@ -12,9 +12,13 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('admin.partials.test');
 });
 
+Route::get('put', function() {
+    Storage::disk('google')->put('test.txt', 'Hello World');
+    return 'File was saved to Google Drive';
+});
 
 //Route untuk Administrator
 Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin'], function(){

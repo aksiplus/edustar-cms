@@ -9,6 +9,24 @@ Halaman Dashboard
 @endsection
 
 @section('content')
+
+<div class="row">
+    <div class="col-md-12">
+
+        <div class="alert bg-dark text-white">
+            <h5>Selamat Datang di EduStar CMS</h5>
+            <p>
+                Anda telah berhasil menggunakan EduStar CMS OpenSource Edition v1.0.0
+            </p>
+            <div class="btn-group">
+                <a href="" class="btn btn-sm btn-primary">Test</a>
+                <a href="" class="btn btn-sm btn-danger">Test</a>
+                <a href="" class="btn btn-sm btn-warning">Test</a>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="main-card mb-3 card">
     <div class="no-gutters row">
         <div class="col-md-4">
@@ -60,7 +78,7 @@ Halaman Dashboard
     <div class="col-md-6 mb-3 ">
         <div class="card">
             <div class="card-header bg-primary text-white">
-                Identitas Sekolah
+                <i class="fa fa-home"></i> Identitas Sekolah
             </div>
 
             <div class="card-body">

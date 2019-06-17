@@ -1,0 +1,20 @@
+HTTrack3.48-24 launched on Sun, 16 Jun 2019 18:47:32 at http://themepixels.me/bracketplus/css/
+(httrack http://themepixels.me/bracketplus/css/ )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+18:47:38	Warning: 	Retry after error -4 (No data (connection closed)) at link themepixels.me/bracketplus/css/bracket.css (from themepixels.me/bracketplus/css/)
+18:47:39	Warning: 	Retry after error -4 (No data (connection closed)) at link themepixels.me/bracketplus/css/bracket.dark.min.css (from themepixels.me/bracketplus/css/)
+18:47:39	Warning: 	Retry after error -4 (No data (connection closed)) at link themepixels.me/bracketplus/css/bracket.min.css (from themepixels.me/bracketplus/css/)
+18:47:39	Warning: 	Retry after error -4 (No data (connection closed)) at link themepixels.me/bracketplus/css/bracket.oreo.css (from themepixels.me/bracketplus/css/)
+18:47:39	Warning: 	Retry after error -4 (No data (connection closed)) at link themepixels.me/bracketplus/css/bracket.css (from themepixels.me/bracketplus/css/)
+18:47:40	Warning: 	Retry after error -4 (No data (connection closed)) at link themepixels.me/bracketplus/css/bracket.dark.min.css (from themepixels.me/bracketplus/css/)
+18:47:40	Warning: 	Retry after error -4 (No data (connection closed)) at link themepixels.me/bracketplus/css/bracket.min.css (from themepixels.me/bracketplus/css/)
+18:47:45	Error: 	Exit requested by shell or user
+18:47:45	Error: 	"No data (connection closed)" (-4) after 2 retries at link themepixels.me/bracketplus/css/bracket.css (from themepixels.me/bracketplus/css/)
+
+HTTrack Website Copier/3.48-24 mirror complete in 13 seconds : 25 links scanned, 16 files written (857711 bytes overall), 16 files updated [842652 bytes received at 64819 bytes/sec], 32200 bytes transferred using HTTP compression in 10 files, ratio 40%, 2.2 requests per connection
+(2 errors, 7 warnings, 0 messages)

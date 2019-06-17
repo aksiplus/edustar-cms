@@ -16,6 +16,8 @@ class Install extends Controller
     {
         $info_sekolah = Sekolah::first();
 
+        return view('install.check');
+
         if(!$info_sekolah)
         {
             return 'Installation Page';
