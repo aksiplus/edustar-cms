@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
+use App\Library\DataSekolah;
+
 class CreateSekolahsTable extends Migration
 {
     /**
@@ -17,9 +19,10 @@ class CreateSekolahsTable extends Migration
             $table->increments('id');
             $table->string('logo')->nullable();
             $table->string('nama_sekolah');
+            $table->string('foto_kepapa_sekolah')->nullable();
             $table->string('npsn')->nullable();
             $table->enum('bentuk_pendidikan',
-                ['sd', 'mi', 'smp', 'mts', 'sma', 'ma', 'mak']
+                array_keys(DataSekolah::bentukPendidikan())
             );
 
             $table->string('rt')->nullable();

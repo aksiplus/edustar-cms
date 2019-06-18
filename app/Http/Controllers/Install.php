@@ -24,7 +24,8 @@ class Install extends Controller
         }
         else
         {
-            return 'Anda sudah menginstal EduStar version';
+            return view('install.done');
+
         }
     }
 

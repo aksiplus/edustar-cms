@@ -84,11 +84,6 @@
                     Laravel
                 </div>
 
-                @foreach($asu as $list)
-                <li>{{ $list->huahua }}</li>
-
-                @endforeach
-
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
                     <a href="https://laracasts.com">Laracasts</a>

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b8bedbaaadfc61a468f5fb58c801e3ef",
+    "content-hash": "ea711d1376382aa9f1e83fbf115ae79d",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -532,6 +532,42 @@
             "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
             "homepage": "https://github.com/firebase/php-jwt",
             "time": "2017-06-27T22:17:23+00:00"
+        },
+        {
+            "name": "froiden/laravel-installer",
+            "version": "1.6.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Froiden/laravel-installer.git",
+                "reference": "5c8843fac8ca1d0a9beeda9023390c8a006c8a3f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Froiden/laravel-installer/zipball/5c8843fac8ca1d0a9beeda9023390c8a006c8a3f",
+                "reference": "5c8843fac8ca1d0a9beeda9023390c8a006c8a3f",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Froiden\\LaravelInstaller\\": "src/"
+                },
+                "files": [
+                    "src/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ajay Kumar Choudhary",
+                    "email": "ajay@froiden.com"
+                }
+            ],
+            "description": "Laravel web installer",
+            "time": "2019-03-14T10:25:34+00:00"
         },
         {
             "name": "google/apiclient",
@@ -5269,6 +5305,56 @@
                 "xunit"
             ],
             "time": "2019-05-28T11:59:40+00:00"
+        },
+        {
+            "name": "rachidlaasri/laravel-installer",
+            "version": "4.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/RachidLaasri/LaravelInstaller.git",
+                "reference": "8063eda959fdee8b337e6ea543603e169e843897"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/RachidLaasri/LaravelInstaller/zipball/8063eda959fdee8b337e6ea543603e169e843897",
+                "reference": "8063eda959fdee8b337e6ea543603e169e843897",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "RachidLaasri\\LaravelInstaller\\Providers\\LaravelInstallerServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "RachidLaasri\\LaravelInstaller\\": "src/"
+                },
+                "files": [
+                    "src/Helpers/functions.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Rachid Laasri",
+                    "email": "rashidlaasri@gmail.com"
+                },
+                {
+                    "name": "Jeremy Kenedy",
+                    "email": "jeremykenedy@gmail.com"
+                }
+            ],
+            "description": "Laravel web installer",
+            "time": "2018-04-30T18:57:04+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",

@@ -11,8 +11,13 @@
 |
 */
 
-Route::get('/', function () {
-    return view('admin.partials.test');
+Route::get('/', 'HomeController@index')->name('home');
+
+Route::get('haha', function(){
+    $data = \App\Library\DataSekolah::bentukPendidikan();
+
+    // return array_key($data);
+    // return array_values($data);
 });
 
 Route::get('put', function() {
@@ -38,7 +43,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
 });
 
 
-Route::get('/install', 'Install@init');
+// Route::get('/install', 'Install@init')->name('install');
 
 Auth::routes();
 
