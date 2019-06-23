@@ -17,11 +17,11 @@ EduStar adalah sebuah platform Edukasi berbasis Cloud. Layanan yang diberikan Ed
 
 ## Instalasi
 
-- Jalankan composer install
-- Buat file .env atau dengan mencopy dari file .env.example
-- Jalankan perintah php artisan key:generate
-- Migrasi database dengan php artisan migrate
-- Mengisi data pokok dengan cara menjalankan perintah php artisan edustar-cms:install
+- Jalankan `composer install`
+- Buat file `.env` atau dengan mencopy dari file `.env.example` atau dengan menjalankan perintah `cp .env.example .env`
+- Jalankan perintah `php artisan key:generate`
+- Migrasi database dengan `php artisan migrate`
+- Mengisi data pokok dengan cara menjalankan perintah `php artisan edustar-cms:install`
 
 ## Konfigurasi untuk mengintegrasi Laravel dengan Google Drive
 
