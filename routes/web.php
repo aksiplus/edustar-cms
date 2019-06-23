@@ -13,16 +13,22 @@
 
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::get('haha', function(){
-    $data = \App\Library\DataSekolah::bentukPendidikan();
+Route::post('/tp_save', 'Admin\TenagaPendidik@store')->name('admin.store');
 
-    // return array_key($data);
-    // return array_values($data);
+Route::get('gdrive', function(){
+    Storage::cloud()->put('test.txt', 'Hello World');
+    return 'File was saved to Google Drive';
 });
 
-Route::get('put', function() {
-    Storage::disk('google')->put('test.txt', 'Hello World');
-    return 'File was saved to Google Drive';
+Route::get('haha', function(){
+    $user = App\User::all();
+
+    return $data =
+    [
+        'total' => $user->count(),
+        'page' => 1,
+        'rows' => $user
+    ];
 });
 
 //Route untuk Administrator
@@ -37,6 +43,16 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth', 'namespace' => 'Admin
     Route::group(['prefix' => 'sekolah'], function(){
         Route::get('/', 'Sekolah@index')->name('admin.sekolah');
         // Route::get('/{id}', 'PPDB@index')->name('admin.ppdb');
+    });
+
+    Route::group(['prefix' => 'tenaga_pendidik'], function(){
+
+        Route::get('get_data', 'TenagaPendidik@getData')->name('admin.tenaga_pendidik.data');
+
+        Route::get('/', 'TenagaPendidik@index')->name('admin.tenaga_pendidik');
+        Route::post('/', 'TenagaPendidik@store')->name('admin.tenaga_pendidik.store');
+
+        Route::get('/detail/{id}', 'TenagaPendidik@detail')->name('admin.tenaga_pendidik.detail');
     });
 
 

@@ -9,6 +9,7 @@ use App\Library\DataSekolah;
 use DB;
 
 use App\Master\Sekolah;
+use App\User;
 
 class InstallApplication extends Command
 {
@@ -50,6 +51,8 @@ class InstallApplication extends Command
         $this->seed();
         $this->setUpKey();
         $this->setSekolah();
+        $this->setUser();
+        $this->finish();
     }
 
 
@@ -216,9 +219,9 @@ class InstallApplication extends Command
 
         system('clear');
 
-        $this->line('=======================');
-        $this->line('|  EduStar CMS v1.0.0 |');
-        $this->line('=======================');
+        $this->headerEdustar();
+
+        $this->line('1/2 - Konfirgurasi Identitas Sekolah');
 
         $bentuk_pendidikan = array_keys(DataSekolah::bentukPendidikan());
 
@@ -226,12 +229,7 @@ class InstallApplication extends Command
         $bentuk_pendidikan = $this->choice('Bentuk Pendidikan' , $bentuk_pendidikan);
         $alamat_sekolah = $this->ask('Alamat Sekolah');
 
-        $sekolah = Sekolah::first();
-
-        if ($sekolah) //Jika data sekolah ada
-        {
-            $sekolah->delete();
-        }
+        Sekolah::truncate();
 
         $sekolah = new Sekolah;
         $sekolah->nama_sekolah = $nama_sekolah;
@@ -240,5 +238,47 @@ class InstallApplication extends Command
 
         $sekolah->save();
 
+
+    }
+
+    private function setUser()
+    {
+        system('clear');
+
+        $this->headerEdustar();
+
+        $this->line('2/2 - Konfirgurasi User Admin');
+
+        $name = $this->ask('Nama');
+        $email = $this->ask('Alamat Email');
+        $password = $this->secret('Password');
+
+        User::truncate();
+
+        $user = new User;
+        $user->name = $name;
+        $user->email = $email;
+        $user->password = bcrypt($password);
+
+        $user->save();
+
+    }
+
+    private function headerEdustar()
+    {
+        $this->line('=======================');
+        $this->line('|  EduStar CMS v1.0.0 |');
+        $this->line('=======================');
+    }
+
+    private function finish()
+    {
+        system('clear');
+
+        $this->headerEdustar();
+
+        $this->line("\n".'Terimakasih telah menggunakan EduStar CMS v1.0.0');
+        $this->line("\n".'Instalasi EduStar telah selesai.');
+        $this->line('Anda bisa mengakses nya dialamat ' . url('/') . ' atau langsung masuk ke halaman Administrator di ' . url('/admin'));
     }
 }

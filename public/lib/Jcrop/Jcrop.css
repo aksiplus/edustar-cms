@@ -33,7 +33,7 @@
 }
 /* Selection Borders */
 .jcrop-border {
-  background: #ffffff url("Jcrop.gif");
+  background: #ffffff url("Jcrop.html");
   line-height: 1px !important;
   font-size: 0 !important;
   overflow: hidden;
@@ -349,7 +349,7 @@
   opacity: .50!important;
 }
 .jcrop-hl-active .jcrop-selection.jcrop-current .jcrop-border {
-  background: #808080 url('Jcrop.gif');
+  background: #808080 url('Jcrop.html');
   opacity: .35!important;
   filter: alpha(opacity=35) !important;
 }
@@ -358,7 +358,7 @@
   opacity: .30!important;
 }
 .jcrop-hl-active .jcrop-selection.jcrop-focus .jcrop-border {
-  background: url('Jcrop.gif');
+  background: url('Jcrop.html');
   opacity: .65!important;
   filter: alpha(opacity=65) !important;
 }
